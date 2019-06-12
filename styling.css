@@ -1,0 +1,49 @@
+body {
+    display: grid;
+    grid-column: 1vw 6fr 1vw;
+    grid-template-areas:
+        "nav nav nav"
+        "header header header"
+        " . aboutME . "
+        " . aboutSite . "
+        " . themes . "
+        "footer footer footer";
+}
+#navBar{
+    grid-area: nav;
+    background: BLUE;
+    height: 40PX;
+    margin: 0;
+    top: 0;
+    left: 0;
+}
+
+#header {
+    grid-area: header;
+    height: 80px;
+    background: #feee90;
+
+}
+
+#section-aboutME {
+    grid-area: aboutME;
+    height: 80px;
+    background: #ff0090;
+}
+
+#section-aboutSITE {
+    grid-area: aboutSite;
+    height: 80px;
+    background: #ff0f10;
+}
+
+#section-Themes {
+    grid-area: themes;
+    height: 80px;
+    background: #f33fff;
+}
+#footer {
+    grid-area: footer;
+    height: 50px;
+    background: #00ee00;
+}
