@@ -11,11 +11,11 @@ body {
 }
 #navBar{
     grid-area: nav;
-    background: BLUE;
+    background: #000100;
     height: 40PX;
-    margin: 0;
-    top: 0;
-    left: 0;
+    position: relative;
+    margin-top: 0;
+
 }
 
 #header {
