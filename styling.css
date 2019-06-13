@@ -1,13 +1,15 @@
 body {
     margin: 0;
+    font-family: 'Roboto', sans-serif;
 
 }
 #wrapper{
     display: grid;
+    grid-template-columns: 1fr 13fr 1fr;
     grid-template-areas:
         " nav nav nav "
         " header header header "
-        " . aboutME . "
+        " aboutME aboutME aboutME "
         " . aboutSite . "
         " . themes . "
         " footer footer footer ";
@@ -18,49 +20,56 @@ body {
     grid-area: nav;
     color: #fff;
     background: #000100;
-    height: 60px;
+    padding: 3px;
 }
 #navBar{
     display: inline-block;
     display: grid;
-    grid-template-columns: 1fr 1fr 2fr 3fr 1fr;
+    grid-template-columns: 0.5fr 1fr 2fr 3fr 0.5fr;
     grid-template-areas: " . logos . links . ";
     overflow: hidden;
     position: fixed;
     width: 100%;
+    align-content: center;
 }
-ul {
+#linkContainer ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
-ul li{
-    font-size: 28px;
+#linkContainer ul li{
+    font-size: 20px;
 }
 #logoContainer{
     grid-area: logos;
     width: 100%;
     height: 100%;
-    background-color: white;
-
+    align-content: center;
+    vertical-align: middle;
+}
+#logo img{
+    margin-top: 0px;
+    padding-top: 4px;
+    height: 50px;
+    margin-bottom: 10px;
 }
 #linkContainer {
     grid-area: links;
     display: grid;
+    text-align: center;
 }
-a:link,
+#linkContainer a:link,
 a:visited {
     background-color: #000100;
     color: #fff;
     padding: 14px 40px;
-    text-align: center;
     text-decoration: none;
     display: inline-block;
 }
 
-a:hover,
+#linkContainer a:hover,
 a:active {
     background-color: #e9302c;
 }
@@ -68,11 +77,20 @@ a:active {
 #header {
     grid-area: header;
     background: #feee90;
-}
 
+}
+#header img{
+    width: 1600px;
+    margin: 0;
+}
 #section-aboutME {
     grid-area: aboutME;
     background: #ff0090;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    align-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 #section-aboutSITE {
