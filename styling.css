@@ -1,11 +1,13 @@
 body {
-    margin: 0;
     font-family: 'Roboto', sans-serif;
-
+    background: #F2F2F2;
+    margin: 0;
+    padding: 0;
 }
-#wrapper{
+
+#bodyWrapper {
     display: grid;
-    grid-template-columns: 1fr 13fr 1fr;
+    grid-template-columns: 0.5fr 13fr 0.5fr;
     grid-template-areas:
         " nav nav nav "
         " header header header "
@@ -15,14 +17,19 @@ body {
         " footer footer footer ";
     width: 100%;
     height: 100%;
+    background: #F2F2F2;
 }
+
+/*******NAVBAR SECTION**************/
 #navBar {
     grid-area: nav;
-    color: #fff;
-    background: #000100;
+    color: #F2F2F2;
+    background: #2F2420;
     padding: 3px;
+    z-index: 1;
 }
-#navBar{
+
+#navBar {
     display: inline-block;
     display: grid;
     grid-template-columns: 0.5fr 1fr 2fr 3fr 0.5fr;
@@ -32,6 +39,7 @@ body {
     width: 100%;
     align-content: center;
 }
+
 #linkContainer ul {
     list-style-type: none;
     margin: 0;
@@ -39,71 +47,194 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
-#linkContainer ul li{
+
+#linkContainer ul li {
     font-size: 20px;
 }
-#logoContainer{
+
+#logoContainer {
     grid-area: logos;
     width: 100%;
     height: 100%;
-    align-content: center;
-    vertical-align: middle;
+    align-self: center;
 }
-#logo img{
+
+#logo img {
     margin-top: 0px;
     padding-top: 4px;
     height: 50px;
-    margin-bottom: 10px;
+    left: 50%;
 }
+
 #linkContainer {
     grid-area: links;
     display: grid;
     text-align: center;
 }
-#linkContainer a:link,
-a:visited {
-    background-color: #000100;
-    color: #fff;
+
+#linkContainer a:link {
+    color: #FAF6F3;
+    background-color: #2F2420;
     padding: 14px 40px;
     text-decoration: none;
     display: inline-block;
 }
 
+#linkContainer a:visited {
+    color: #FAF6F3;
+    background-color: #2F2420;
+    padding: 14px 40px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+
 #linkContainer a:hover,
 a:active {
     background-color: #e9302c;
+    color: #FAF6F3;
 }
 
+/***************HEADER SECTION************/
 #header {
     grid-area: header;
-    background: #feee90;
-
+    display: grid;
+    text-align: center;
 }
-#header img{
-    width: 1600px;
+
+#header img {
+    width: 100%;
+    align-self: center;
     margin: 0;
 }
+
+#headerTextwrapper {
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#headerTextwrapper h1 {
+    font-size: 70px;
+}
+
+/***************ABOUT ME SECTION************/
+#section-aboutME a:link,
+a:visited {
+    color: #2F2420;
+    text-decoration: none;
+}
+
 #section-aboutME {
     grid-area: aboutME;
-    background: #ff0090;
+    background: #248EA6;
+    color: #FAF6F3;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    text-align: center;
+    align-items: center;
+}
+
+#btnAM {
+    margin-top: 15px;
+    background-color: #FADC3B;
+    width: 20%;
+    font-size: 20px;
+    width: 20%;
+    margin: auto;
+}
+
+/***************ABOUT SITE SECTION************/
+#section-aboutSITE a:link,
+a:visited {
+    color: #2F2420;
+    text-decoration: none;
+}
+
+#section-aboutSITE {
+    margin-top: 10px;
+    grid-area: aboutSite;
+    color: #2F2420;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     align-content: center;
     align-items: center;
     text-align: center;
+    border: solid 2px #E9302C;
+
 }
 
-#section-aboutSITE {
-    grid-area: aboutSite;
-    background: #ff0f10;
+#section-aboutSITE :hover {}
+
+#btnAS {
+    margin-top: 15px;
+    background-color: #FADC3B;
+    width: 20%;
+    font-size: 20px;
+    width: 20%;
+    margin: auto;
+}
+
+/***************THEMES SECTION************/
+#section-Themes a:link,
+a:visited {
+    color: #000100;
+    text-decoration: none;
+}
+
+#section-Themes :hover {
+    background-color: #FADC3B;
 }
 
 #section-Themes {
     grid-area: themes;
-    background: #f33fff;
+    background: #FAF6F3;
+    display: inline-block;
+    margin-top: 10px;
+
 }
 
+#section-Themes h2 {
+    color: 000100;
+}
+
+#themesTitle {
+    text-align: center;
+}
+
+.themeContainers {
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: "themeHeader img"
+        ". txt";
+}
+
+.themesTxt {
+    grid-area: txt;
+    padding-left: 10px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.themeHeader {
+    grid-area: themeHeader;
+    align-self: center;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.themesImg {
+    grid-area: img;
+    height: 200px; /* placeholder*/
+}
+/***************FOOTER SECTION************/
 #footer {
     grid-area: footer;
-    background: #00ee00;
+    background: #000100;
+    color: #FAF6F3;
 }
+
+/***************MEDIA QUERIES************/
