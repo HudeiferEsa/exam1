@@ -5,24 +5,6 @@ body {
     padding: 0;
 }
 
-#bodyWrapper {
-    display: grid;
-    grid-template-columns: 0.5fr 13fr 0.5fr;
-    grid-template-areas:
-        " nav nav nav "
-        " header header header "
-        " . aboutME . "
-        " . aboutSite . "
-        " . themes . "
-        " footer footer footer ";
-    grid-row-gap: 20px;
-    width: 100%;
-    height: 100%;
-    background-color: #F2F2F2;
-    background-image: url(Assets/images/LARGE/1x/bodyBG.png);
-    background-blend-mode: color;
-}
-
 /*******NAVBAR SECTION**************/
 #navBar {
     grid-area: nav;
@@ -99,6 +81,42 @@ a:active {
     color: #FAF6F3;
 }
 
+/***************FOOTER SECTION************/
+#footer {
+    grid-area: footer;
+    background: #000100;
+    color: #FAF6F3;
+}
+.footer{
+    display: block;
+    width: 100%;
+    position: absolute;
+    margin: 0;
+    background: #000100;
+    color: #FAF6F3;
+}
+
+/***************HOMEPAGE BELOW************/
+/***************HOMEPAGE BELOW************/
+
+#bodyWrapper {
+    display: grid;
+    grid-template-columns: 0.5fr 13fr 0.5fr;
+    grid-template-areas:
+        " nav nav nav "
+        " header header header "
+        " . aboutME . "
+        " . aboutSite . "
+        " . themes . "
+        " footer footer footer ";
+    grid-row-gap: 20px;
+    width: 100%;
+    height: 100%;
+    background-color: #F2F2F2;
+    background-image: url(Assets/images/LARGE/1x/bodyBG.png);
+    background-blend-mode: color;
+}
+
 /***************HEADER SECTION************/
 #header {
     grid-area: header;
@@ -113,6 +131,7 @@ a:active {
     margin: 0;
     height: 722px;
 }
+
 #headerTextwrapper {
     overflow: hidden;
     position: absolute;
@@ -126,6 +145,7 @@ a:active {
     color: #e9302c;
     background-color: #fffa;
 }
+
 /***************ABOUT ME SECTION************/
 #section-aboutME a:link,
 a:visited {
@@ -198,8 +218,8 @@ a:visited {
 }
 
 #section-Themes h2 {
-/*    color: 2F2420;*/
-    color: 000100;
+    /*    color: 2F2420;*/
+    color: #000100;
 }
 
 #themesTitle {
@@ -218,9 +238,9 @@ a:visited {
 
 .themesTxt {
     grid-area: txt;
-    padding-bottom:0px;
-    padding-left:20px;
-    padding-right:20px;
+    padding-bottom: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
     margin-top: 0px;
     vertical-align: middle;
     text-align: left;
@@ -231,17 +251,56 @@ a:visited {
     grid-area: themeHeader;
     align-self: center;
     text-align: center;
-    display: block<
+    display: block;
 }
+
 .themesImg {
     grid-area: img;
-    height: 200px; /* placeholder height*/
+    height: 200px;
+    /* placeholder height*/
     width: 100%;
 }
-/***************FOOTER SECTION************/
-#footer {
-    grid-area: footer;
-    background: #000100;
-    color: #FAF6F3;
+
+/***************ARTICLE PAGES BELOW************/
+/*************ARTICLE CLASSES BELOW************/
+.pageWrapper {
+    display: block;
 }
+
+.mainImg {
+    width: 100%;
+    display: block;
+}
+.articleTitle {
+    text-align: center;
+    display: block;
+}
+
+.articleSection {
+    padding: 0% 10% 10% 10%;
+    display: grid;
+}
+.asImgDiv{
+    align-items: center;
+    align-content: center;
+    vertical-align: middle;
+    align-self: center;
+    padding-left: 50%;
+    width: 100%;
+}
+
+/*************ABOUT SITE BELOW************/
+
+/*************ABOUT ME BELOW************/
+
+
+/*************THEMES LANDING PAGE BELOW************/
+
+/*************THEME 1 PAGE BELOW************/
+/*************THEME 2 PAGE BELOW************/
+/*************THEME 3 PAGE BELOW************/
+/*************THEME 4 PAGE BELOW************/
+
+
+
 /***************MEDIA QUERIES************/
