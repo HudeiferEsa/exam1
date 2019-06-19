@@ -266,6 +266,9 @@ a:visited {
     width: 100%;
     margin: 0;
 }
+#footer h2{
+    margin-left: 10%;
+}
 
 /***************ARTICLE PAGES BELOW************/
 /*************ARTICLE CLASSES BELOW************/
@@ -321,7 +324,9 @@ a:visited {
     background: #000100;
     color: #FAF6F3;
 }
-
+.footer h2{
+    margin-left: 10%;
+}
 /*************THEMES LANDING PAGE BELOW************/
 
 
